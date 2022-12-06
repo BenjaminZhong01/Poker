@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+    <head>
+        {% load static %}
+        <link href="{% static 'texas/main_page.css' %}" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+        <script src="{% static 'texas/ajax/main_ajax.js' %}"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title id=""> Main Page </title>
+    </head>
+    <body>
+        <div class="main">
+            <div class="main_bar">
+                TARTANS TEXAS HOLD'EM GAME CENTER
+            </div>
+            <div class="main_content">
+                <div id="left_half">
+                    <div id="top_button_area">
+                        <a class="button_style" id="profile_button" href="{% url 'profile' %}">Profile</a>
+                        <a class="button_style" id="logout_button" href="{% url 'logout' %}">Logout</a>
+                    </div>
+                    <p id="page_title">Welcome</p>
+                    <ul id="available_rooms">
+                        <!-- <li>
+                            <span class="room_represent">Room 1: </span>
+                            <span class="player_number_pre">No. Player: 3</span>
+                        </li>
+                        <li>
+                            <span class="room_represent">Room 2: </span>
+                            <span class="player_number_pre">No. Player: 3</span>
+                        </li>
+                        <li>
+                            <span class="room_represent">Room 3: </span>
+                            <span class="player_number_pre">No. Player: 3</span>
+                        </li>
+                        <li>
+                            <span class="room_represent">Room 4: </span>
+                            <span class="player_number_pre">No. Player: 3</span>
+                        </li> -->
+                    </ul>
+                    <form>
+                        <div>
+                            <input id="room_number_input" placeholder="Room #">
+                            <button class="form_button_style" id="join_room_button" type="button" onclick="joinRoom()">Join Room</button>
+                        </div>
+                        <button class="form_button_style" id="create_room_button" type="button" onclick="createRoom()">Create A New Room</button>
+                    </form>
+                </div>
+                <div id="right_half">
+                    <div>
+                        <img class="crown_image" id="crown_1" src="{% static 'texas/crown.png' %}">
+                        <span id="leaderboard">Leaderboard</span>
+                        <img class="crown_image" id="crown_2" src="{% static 'texas/crown.png' %}">
+                    </div>
+                    <div>
+                        <div id="first">
+                            <img class="header_image" id="header_2" src="{% static 'texas/default_header.png' %}">
+                            <p class="username" id="username_2">Username</p>
+                            <p class="rank" id="rank_2">No.2</p>
+                            <p class="token" id="token_2">tokens</p>
+                        </div>
+                        <div id="second">
+                            <img class="header_image" id="header_1" src="{% static 'texas/default_header.png' %}">
+                            <p class="username" id="username_1">Username</p>
+                            <p class="rank" id="rank_1">No.1</p>
+                            <p class="token" id="token_1">tokens</p>
+                        </div>
+                        <div id="third">
+                            <img class="header_image" id="header_3" src="{% static 'texas/default_header.png' %}">
+                            <p class="username" id="username_3">Username</p>
+                            <p class="rank" id="rank_3">No.3</p>
+                            <p class="token" id="token_3">tokens</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            updateLeaderboard()
+            getAvailableRoomsInfo()
+            const intervalIdUpdateLeaderboard = setInterval(updateLeaderboard, 1000)
+            const intervalIdGetAvailableRooms = setInterval(getAvailableRoomsInfo, 1000)
+        </script>
+    </body>
+</html>

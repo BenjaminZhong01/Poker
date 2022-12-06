@@ -1,0 +1,308 @@
+body {
+    margin: auto;
+}
+
+.main {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main_bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    height: 15.9vh;
+    background-color: #891017;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 3vw;
+    color: #ffffff;
+}
+
+.main_content {
+    position: absolute;
+    background-image: url('background_pic.png');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    margin-top: 15.9vh;
+    width: 100vw;
+    height: 84.1vh;
+}
+
+#left_half {
+    width: 50vw;
+    margin-left: 0vw;
+}
+
+#right_half {
+    width: 50vw;
+    margin-left: 50vw;
+}
+
+#middle {
+    width: 50vw;
+    margin-left: 25vw;
+}
+
+.button_style {
+    position: absolute;
+    width: 10vw;
+    height: 6vh;
+    background-color: #BA0000;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: #FFFFFF;
+    margin-top: 5vh;
+
+    /* Profile */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.25vw;
+    text-decoration: none;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#profile_button {
+    margin-left: 2.5vw;
+}
+
+#logout_button {
+    margin-left: 16vw;
+}
+
+#login_button {
+    margin-left: 20vw;
+}
+
+#page_title {
+    position: absolute;
+    margin-top: 16vh;
+    margin-left: 15vw;
+    width: 10vw;
+    font-family: Luminari;
+    font-style: normal;
+    font-weight: 488;
+    font-size: 6vw;
+    text-align: center;
+    color: black;
+}
+
+
+#room_number_input {
+    position: absolute;
+    margin-top: 38vh;
+    margin-left: 9vw;
+    width: 18vw;
+    font-size: 2.45vw;
+}
+
+.form_button_style {
+    position: absolute;
+    box-sizing: border-box;
+    background: #801A1A;
+    border: 0.05vw solid #FFFFFF;
+    border-radius: 10px;
+    font-size: 2.45vw;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 888;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#join_room_button {
+    margin-left: 30vw;
+    margin-top: 37.6vh;
+    width: 16vw;
+}
+
+#create_room_button {
+    margin-left: 9vw;
+    margin-top: 67vh;
+    width: 37vw;
+}
+
+.crown_image {
+    width: 6.5vw;
+    height: 9vh;
+    margin-top: 10vh;
+    margin-left: 5.5vw;
+}
+
+#crown_2 {
+    margin-left: 27vw;
+}
+
+#leaderboard {
+    position: absolute;
+    margin-top: 12.5vh;
+    margin-left: 5.5vw;
+    font-family: 'Lobster';
+    font-style: normal;
+    font-size: 3vw;
+    font-weight: 600;
+    text-align: center;
+    color: #A02E09;
+}
+
+#first {
+    display: inline-block;
+    width: 13vw;
+    margin-left: 1vw;
+    text-align: center;
+}
+
+#second {
+    display: inline-block;
+    width: 16vw;
+    margin-left: 3vw;
+    text-align: center;
+}
+
+#third {
+    display: inline-block;
+    width: 10vw;
+    margin-left: 1.5vw;
+    text-align: center;
+}
+
+#header_2 {
+    width: 13vw;
+    height: 30vh;
+    margin-left: 3.5vw;
+    margin-top: 12vh;
+}
+
+#header_1 {
+    width: 16vw;
+    height: 40vh;
+    margin-left: 2vw;
+    margin-top: 2vh;
+}
+
+#header_3 {
+    width: 10vw;
+    height: 25vh;
+    margin-left: 2vw;
+    margin-top: 17vh;
+}
+
+.username {
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5vw;
+    text-align: center;
+    color: black;
+}
+
+.token {
+    position: absolute;
+    font-family: "cursive";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5vw;
+    text-align: center;
+    color: olivedrab;
+}
+
+.rank {
+    position: absolute;
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5vw;
+    text-align: center;
+    color: #C75F00;
+    margin-top: 8vh;
+}
+
+#username_2 {
+    width: 13vw;
+    margin-left: 3.5vw;
+}
+
+#token_2 {
+    width: 13vw;
+    margin-left: 3.5vw;
+    margin-top: 14vh;
+}
+
+#rank_2 {
+    width: 13vw;
+    margin-left: 3.5vw;
+}
+
+#username_1 {
+    width: 16vw;
+    margin-left: 2vw;
+}
+
+#token_1 {
+    width: 16vw;
+    margin-left: 2vw;
+    margin-top: 14vh;
+}
+
+#rank_1 {
+    width: 16vw;
+    margin-left: 2vw;
+}
+
+#username_3 {
+    width: 10vw;
+    margin-left: 2vw;
+}
+
+#token_3 {
+    width: 10vw;
+    margin-left: 2vw;
+    margin-top: 14vh;
+}
+
+#rank_3 {
+    width: 10vw;
+    margin-left: 2vw;
+}
+
+ul {
+    border-left: #801A1A 0.5vw solid;
+    background-color: #f1f1f1;
+    list-style-type: none;
+    position: absolute;
+    margin-top: 47vh;
+    margin-left: 11.5vw;
+    width: 30vw;
+    height: 17.5vh;
+    overflow-y: auto;
+}
+
+ul li {
+    border-bottom: 1px solid #ddd;
+}
+
+.room_represent {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2vw;
+    text-align: left;
+    color: gray;
+}
+
+.player_number_pre {
+    font-family: 'Inter';
+    font-size: 1.5vw;
+    text-align: right;
+    color: gray;
+    float: right;
+}

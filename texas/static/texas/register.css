@@ -1,0 +1,291 @@
+body {
+    margin: auto;
+}
+
+.main {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main_bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    height: 15.9vh;
+    background-color: #891017;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 3vw;
+    color: #ffffff;
+}
+
+.main_content {
+    position: absolute;
+    background-image: url('background_pic.png');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    margin-top: 15.9vh;
+    width: 100vw;
+    height: 84.1vh;
+}
+
+#left_half {
+    width: 50vw;
+    margin-left: 0vw;
+}
+
+#right_half {
+    width: 50vw;
+    margin-left: 50vw;
+}
+
+#middle {
+    width: 50vw;
+    margin-left: 25vw;
+}
+
+.button_style {
+    position: absolute;
+    width: 10vw;
+    height: 6vh;
+    background-color: #BA0000;
+    border-radius: 10px;
+    border-color: #FFFFFF;
+    margin-top: 5vh;
+
+    /* Profile */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.25vw;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#profile_button {
+    margin-left: 2.5vw;
+}
+
+#logout_button {
+    margin-left: 16vw;
+}
+
+#login_button {
+    margin-left: 20vw;
+}
+
+#page_title {
+    position: absolute;
+    margin-top: 16vh;
+    margin-left: 15vw;
+    width: 10vw;
+    font-family: Luminari;
+    font-style: normal;
+    font-weight: 488;
+    font-size: 6vw;
+    text-align: center;
+    color: black;
+}
+
+
+#room_number_input {
+    position: absolute;
+    margin-top: 38vh;
+    margin-left: 9vw;
+    width: 18vw;
+    font-size: 2.45vw;
+}
+
+#username_input {
+    position: absolute;
+    margin-top: 30vh;
+    margin-left: 45vw;
+    width: 40vw;
+    height:40vw;
+    font-size: 2.45vw;
+    text-align: center;
+}
+
+form {
+    /*padding: 40px;*/
+    position: absolute;
+    margin-top: 12vh;
+    margin-left: 28vw;
+    width: 45vw;
+    font-size: 2.3vw;
+}
+
+input {
+    margin-bottom: 1vh;
+    width: 20vw;
+    height: 3vw;
+    font-size: 2.45vw;
+}
+
+#password_input {
+    position: absolute;
+    margin-top: 50vh;
+    margin-left: 20vw;
+    width: 25vw;
+    font-size: 2.45vw;
+}
+
+.form_button_style {
+    position: absolute;
+    box-sizing: border-box;
+    background: #801A1A;
+    border: 0.05vw solid #FFFFFF;
+    border-radius: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 888;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#id_register_button {
+    margin-left: 7vw;
+    margin-top: 6vh;
+    width: 8vw;
+    height: 2.5vw;
+    font-size: 1.7vw;
+    text-decoration: none;
+}
+
+#id_login_button {
+    margin-left: 27vw;
+    margin-top: 6vh;
+    width: 8vw;
+    height: 2.5vw;
+    font-size: 1.7vw;
+    text-decoration: none;
+}
+
+#create_room_button {
+    margin-left: 9vw;
+    margin-top: 55vh;
+    width: 37vw;
+}
+
+.crown_image {
+    width: 6.5vw;
+    height: 9vh;
+    margin-top: 10vh;
+    margin-left: 5.5vw;
+}
+
+#crown_2 {
+    margin-left: 27vw;
+}
+
+#leaderboard {
+    position: absolute;
+    margin-top: 12.5vh;
+    margin-left: 5.5vw;
+    font-family: 'Lobster';
+    font-style: normal;
+    font-size: 3vw;
+    font-weight: 600;
+    text-align: center;
+    color: #A02E09;
+}
+
+#first {
+    display: inline-block;
+    width: 13vw;
+    margin-left: 1vw;
+    text-align: center;
+}
+
+#second {
+    display: inline-block;
+    width: 16vw;
+    margin-left: 3vw;
+    text-align: center;
+}
+
+#third {
+    display: inline-block;
+    width: 10vw;
+    margin-left: 1.5vw;
+    text-align: center;
+}
+
+#header_1 {
+    width: 13vw;
+    height: 30vh;
+    margin-left: 3.5vw;
+    margin-top: 12vh;
+}
+
+#header_2 {
+    width: 16vw;
+    height: 40vh;
+    margin-left: 2vw;
+    margin-top: 2vh;
+}
+
+#header_3 {
+    width: 10vw;
+    height: 25vh;
+    margin-left: 2vw;
+    margin-top: 17vh;
+}
+
+.username {
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5vw;
+    text-align: center;
+    color: black;
+}
+
+.rank {
+    position: absolute;
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5vw;
+    text-align: center;
+    color: #C75F00;
+    margin-top: 8vh;
+}
+
+#username_1 {
+    width: 13vw;
+    margin-left: 3.5vw;
+}
+
+#rank_1 {
+    width: 13vw;
+    margin-left: 3.5vw;
+}
+
+#username_2 {
+    width: 16vw;
+    margin-left: 2vw;
+}
+
+#rank_2 {
+    width: 16vw;
+    margin-left: 2vw;
+}
+
+#username_3 {
+    width: 10vw;
+    margin-left: 2vw;
+}
+
+#rank_3 {
+    width: 10vw;
+    margin-left: 2vw;
+}

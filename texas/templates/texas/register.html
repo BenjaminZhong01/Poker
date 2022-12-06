@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    {% load static %}
+    <link href="{% static 'texas/register.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title id=""> Register </title>
+</head>
+
+
+<body>
+<div class="main">
+    <div class="main_bar">
+        TARTANS TEXAS HOLD'EM GAME CENTER
+    </div>
+    <div class="main_content">
+
+        {% block content %}
+
+        <form method="post" action="{% url 'register' %}">
+
+            <table>
+                {{form}}
+            </table>
+
+            {% csrf_token %}
+
+
+            <div id="top_button_area">
+                <a>
+                    <button class="form_button_style" type="submit" id="id_register_button">Submit</button>
+                </a>
+                <a href="{% url 'login' %}" class="form_button_style" id="id_login_button">Login</a>
+            </div>
+
+        </form>
+
+        {% endblock %}
+
+
+    </div>
+</div>
+
+
+
+
+</body>
+
+
+
+

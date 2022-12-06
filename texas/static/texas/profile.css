@@ -1,0 +1,380 @@
+body {
+    margin: auto;
+}
+
+.main {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main_bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100vw;
+    height: 15.9vh;
+    background-color: #891017;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 3vw;
+    color: #ffffff;
+}
+
+.main_content {
+    position: absolute;
+    background-image: url('background_pic.png');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    margin-top: 15.9vh;
+    width: 100vw;
+    height: 84.1vh;
+}
+
+#left_half {
+    width: 50vw;
+    margin-left: 0vw;
+    margin-right: 0vw;
+}
+
+#right_half {
+    position: absolute;
+    top: 10vh;
+    left: 0vw;
+    width: 50vw;
+    margin-left: 50vw;
+}
+
+#middle {
+    width: 50vw;
+    margin-left: 25vw;
+}
+
+.button_style {
+    position: absolute;
+    width: 10vw;
+    height: 6vh;
+    background-color: #BA0000;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: #FFFFFF;
+    margin-top: 5vh;
+
+    /* Profile */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.25vw;
+    text-decoration: none;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#profile_button {
+    margin-left: 2.5vw;
+}
+
+#logout_button {
+    margin-left: 16vw;
+}
+
+#login_button {
+    margin-left: 20vw;
+}
+
+#page_title {
+    position: absolute;
+    margin-top: 16vh;
+    margin-left: 15vw;
+    width: 10vw;
+    font-family: Luminari;
+    font-style: normal;
+    font-weight: 488;
+    font-size: 6vw;
+    text-align: center;
+    color: black;
+}
+
+
+#name_input {
+    position: absolute;
+    width: 10vw;
+    height: 3vh;
+    font-size: 2vw;
+    margin-left: 19vw;
+    margin-top: 18vh;
+    padding: 0.5vw;
+}
+
+#token_input {
+    position: absolute;
+    width: 10vw;
+    height: 3vh;
+    font-size: 2vw;
+    margin-left: 19vw;
+    margin-top: 37vh;
+    padding: 0.5vw;
+}
+
+.form_button_style {
+    position: absolute;
+    box-sizing: border-box;
+    background: #801A1A;
+    border: 0.05vw solid #FFFFFF;
+    border-radius: 10px;
+    font-size: 2.45vw;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 888;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#join_room_button {
+    margin-left: 30vw;
+    margin-top: 37.6vh;
+    width: 16vw;
+}
+
+#create_room_button {
+    margin-left: 9vw;
+    margin-top: 55vh;
+    width: 37vw;
+}
+
+.crown_image {
+    width: 6.5vw;
+    height: 9vh;
+    margin-top: 10vh;
+    margin-left: 5.5vw;
+}
+
+#crown_2 {
+    margin-left: 27vw;
+}
+
+#leaderboard {
+    position: absolute;
+    margin-top: 12.5vh;
+    margin-left: 5.5vw;
+    font-family: 'Lobster';
+    font-style: normal;
+    font-size: 3vw;
+    font-weight: 600;
+    text-align: center;
+    color: #A02E09;
+}
+
+#id_profile_picture {
+    /*display: inline-block;*/
+    width: 18vw;
+    height: 40vh;
+    text-align: center;
+}
+
+#third {
+    display: inline-block;
+    width: 10vw;
+    margin-left: 1.5vw;
+    text-align: center;
+}
+
+#header_2 {
+    width: 13vw;
+    height: 30vh;
+    margin-left: 3.5vw;
+    margin-top: 12vh;
+}
+
+#header_1 {
+    width: 16vw;
+    height: 40vh;
+    margin-left: 2vw;
+    margin-top: 2vh;
+}
+
+#header_3 {
+    width: 10vw;
+    height: 25vh;
+    margin-left: 2vw;
+    margin-top: 17vh;
+}
+
+.username {
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5vw;
+    text-align: center;
+    color: black;
+}
+
+.rank {
+    position: absolute;
+    font-family: 'Impact';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5vw;
+    text-align: center;
+    color: #C75F00;
+    margin-top: 8vh;
+}
+
+#username_2 {
+    width: 13vw;
+    margin-left: 3.5vw;
+}
+
+#rank_2 {
+    width: 13vw;
+    margin-left: 3.5vw;
+}
+
+#username_1 {
+    width: 16vw;
+    margin-left: 2vw;
+}
+
+#rank_1 {
+    width: 16vw;
+    margin-left: 2vw;
+}
+
+#username_3 {
+    width: 10vw;
+    margin-left: 2vw;
+}
+
+#rank_3 {
+    width: 10vw;
+    margin-left: 2vw;
+}
+
+
+
+#test {
+    /*padding: 40px;*/
+    position: absolute;
+    margin-top: 10vh;
+    margin-left: 50vw;
+    width: 18vw;
+    font-size: 2.45vw;
+}
+
+#first {
+    width: 10vw;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    text-align: left;
+}
+
+#second {
+    width: 10vw;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    text-align: left;
+}
+
+#third {
+    width: 10vw;
+    margin-top: 2vw;
+    margin-left: 2vw;
+    text-align: left;
+}
+
+th {
+    width: 12vw;
+    height: 1vh;
+    font-size: 1.5vw;
+    border-color: inherit;
+}
+
+td {
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+
+.profile_picture{
+    margin-top: 19vh;
+    margin-left: 10vw;
+}
+
+table{
+    width: 50vw;
+    height: 10vh;
+
+}
+
+input{
+    font-size: 1.5vw;
+}
+
+#id_update_profile_button{
+    font-size: 1.5vw;
+    margin-left: 12.5vw;
+}
+
+img{
+    width: 6.5vw;
+    height: 9vh;
+    margin-top: 10vh;
+    margin-left: 5.5vw;
+}
+
+.text_box{
+    font-size: 2.5vw;
+
+}
+
+.user_info{
+    font-size: 2.5vw;
+    padding: 4vw;
+}
+
+#wo{
+    font-size: 2.5vw;
+}
+
+
+.user_profile_entity{
+    max-width: 10vw;
+}
+
+
+#buy_in_button{
+    margin-left: 35vw;
+    margin-top: 37vh;
+    font-size: 2vw;
+}
+
+#buy_in_button2{
+    margin-left: 35vw;
+    margin-top: 27.5vh;
+    font-size: 2vw;
+}
+
+
+#name_edit_button{
+    margin-left: 35vw;
+    margin-top: 8vh;
+    font-size: 2vw;
+}
+
+#name_edit_button2{
+    margin-left: 35vw;
+    margin-top: 18.5vh;
+    font-size: 2vw;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,179 @@
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Texas Hold'em</title>
+  <meta name="description" content="Figma htmlGenerator">
+  <meta name="author" content="htmlGenerator">
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
+  <link href="{% static 'texas/styles.css' %}?v={% now 'U' %}" rel="stylesheet" type="text/css">
+  <script src="{% static 'texas/ajax/main_ajax.js' %}"></script>
+
+  <style>
+    body {
+      background: #E5E5E5;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class=e18_3>
+    <div class="e20_20">
+      <div class="game_room_tool_bar">
+        <button id="leave_button" class="leave_button_style" onclick="leaveRoom()">Leave Room</button>
+        <p class="room_number_style" id="room_number">Room Number: </p>
+      </div>
+
+    </div>
+    <div class="p9_image" id="p9_image"></div>
+    <div class="p5_image" id="p5_image"></div>
+    <div class="p7_image" id="p7_image"></div>
+    <div class="table" id="table"></div><span class="p3_bet" id="p3_bet">40</span>
+    <div class="p3_chip" id="p3_chip"></div>
+    <div class="card3" id="card3"></div>
+    <div class="card2" id="card2"></div>
+    <div class="card1" id="card1"></div>
+    <div class="card4" id="card4"></div>
+    <div class="card5" id="card5"></div>
+    <div class="mycard2" id="mycard2"></div>
+    <div class="mycard1" id="mycard1"></div>
+
+    <div class="other_user_hand" id="p1_hand">
+      <div class="other_user_hand_card" id="p1_card1"></div>
+      <div class="other_user_hand_card" id="p1_card2"></div>
+    </div>
+    <div class="other_user_hand" id="p2_hand">
+      <div class="other_user_hand_card" id="p2_card1"></div>
+      <div class="other_user_hand_card" id="p2_card2"></div>
+    </div>
+    <div class="other_user_hand" id="p3_hand">
+      <div class="other_user_hand_card" id="p3_card1"></div>
+      <div class="other_user_hand_card" id="p3_card2"></div>
+    </div>
+    <div class="other_user_hand" id="p4_hand">
+      <div class="other_user_hand_card" id="p4_card1"></div>
+      <div class="other_user_hand_card" id="p4_card2"></div>
+    </div>
+    <div class="other_user_hand" id="p5_hand">
+      <div class="other_user_hand_card" id="p5_card1"></div>
+      <div class="other_user_hand_card" id="p5_card2"></div>
+    </div>
+    <div class="other_user_hand" id="p6_hand">
+      <div class="other_user_hand_card" id="p6_card1"></div>
+      <div class="other_user_hand_card" id="p6_card2"></div>
+    </div>
+    <div class="other_user_hand" id="p7_hand">
+      <div class="other_user_hand_card" id="p7_card1"></div>
+      <div class="other_user_hand_card" id="p7_card2"></div>
+    </div>
+    <div class="other_user_hand" id="p8_hand">
+      <div class="other_user_hand_card" id="p8_card1"></div>
+      <div class="other_user_hand_card" id="p8_card2"></div>
+    </div>
+    <div class="other_user_hand" id="p9_hand">
+      <div class="other_user_hand_card" id="p9_card1"></div>
+      <div class="other_user_hand_card" id="p9_card2"></div>
+    </div>
+
+    <div class="p3_image" id="p3_image"></div>
+    <div class="p6_image" id="p6_image"></div>
+    <div class="p2_image" id="p2_image"></div>
+    <div class="p1_image" id="p1_image"></div>
+    <div class="p8_image" id="p8_image"></div>
+    <div class="p4_image" id="p4_image"></div>
+
+    <div class="p1_name" id="p1_name">Tom Dwan</div>
+    <div class="p2_name" id="p2_name">Tom Dwan</div>
+    <div class="p3_name" id="p3_name">Tom Dwan</div>
+    <div class="p4_name" id="p4_name">Tom Dwan</div>
+    <div class="p5_name" id="p5_name">Tom Dwan</div>
+    <div class="p6_name" id="p6_name">Tom Dwan</div>
+    <div class="p7_name" id="p7_name">Tom Dwan</div>
+    <div class="p8_name" id="p8_name">Tom Dwan</div>
+    <div class="p9_name" id="p9_name">Tom Dwan</div>
+
+    <button id="ready_button" class="readybutton" onclick="userReady()">Ready</button>
+    <button id="button1" class="button1" onclick="userFold()">Fold</button>
+    <button id="button2" class="button2" onclick="userCall()">Call</button>
+    <button id="button3" class="button3" onclick="userRaise()">Raise <p id="raise_amount">20</p></button>
+    <button id="button4" class="button4" onclick="userAllIn()">All In</button>
+    <button id="button5" class="button5" onclick="userAdd()">+</button>
+    <button id="button6" class="button6" onclick="userMinus()">-</button>
+    <div class="pot" id="pot">500</div>
+    <div class="center_chip" id="center_chip"></div>
+    <div class="my_amount" id="my_amount">2,000</div>
+    <div class="p9_amount" id="p9_amount">2,000</div>
+    <div class="p6_amount" id="p6_amount">2,000</div>
+    <div class="p8_amount" id="p8_amount">2,000</div>
+    <div class="p7_amount" id="p7_amount">2,000</div>
+    <div class="p1_amount" id="p1_amount">2,000</div>
+    <div class="p2_amount" id="p2_amount">2,000</div>
+    <div class="p3_amount" id="p3_amount">2,000</div>
+    <div class="p3_option" id="p3_option">Call</div>
+    <div class="p5_option" id="p5_option">Call</div>
+    <div class="p6_option" id="p6_option">Call</div>
+    <div class="p7_option" id="p7_option">Call</div>
+    <div class="p8_option" id="p8_option">Call</div>
+    <div class="p9_option" id="p9_option">Call</div>
+    <div class="p4_option" id="p4_option">Call</div>
+    <div class="p1_option" id="p1_option">Call</div>
+    <div class="p2_option" id="p2_option">Call</div>
+    <div class="p5_amount" id="p5_amount">2,000</div>
+    <div class="p4_amount" id="p4_amount">2,000</div>
+    <div class="winner_display" id="winner_display">WINNER: </div>
+    <div class="D" id="D_4">D</div><span class="p4_bet" id="p4_bet">20</span><span class="p2_bet" id="p2_bet">40</span>
+    <div class="D" id="D_1">D</div>
+    <div class="D" id="D_2">D</div>
+    <div class="D" id="D_3">D</div>
+    <div class="D" id="D_5">D</div>
+    <div class="D" id="D_6">D</div>
+    <div class="D" id="D_7">D</div>
+    <div class="D" id="D_8">D</div>
+    <div class="D" id="D_9">D</div>
+    <div class="D" id="D_0">D</div>
+    <div class="p2_chip" id="p2_chip"></div>
+    <div class="p4_chip" id="p4_chip"></div><span class="p5_bet" id="p5_bet">40</span>
+    <div class="p5_chip" id="p5_chip"></div><span class="p8_bet" id="p8_bet">80</span>
+    <div class="p8_chip" id="p8_chip"></div><span class="p6_bet" id="p6_bet">40</span>
+    <div class="p6_chip" id="p6_chip"></div><span class="p7_bet" id="p7_bet">40</span>
+    <div class="p7_chip" id="p7_chip"></div><span class="p9_bet" id="p9_bet">40</span>
+    <div class="p9_chip" id="p9_chip"></div><span class="my_bet" id="my_bet">40</span>
+    <div class="my_chip" id="my_chip"></div><span class="p1_bet" id="p1_bet">40</span>
+    <div class="p1_chip" id="p1_chip"></div>
+
+<!--    <p id="max_raise_amount">20</p>-->
+
+  </div>
+  <script>
+    const selfUserId = "{{user.id}}"
+
+    // onunload = (event) => {
+    //   exitRoom()
+    // }
+
+    // addEventListener('pagehide', (event) => {
+    //   exitRoom()
+    // }, {capture: true})
+
+    history.pushState(null, null, 'game');
+
+    // window.addEventListener('popstate', function(event) {
+    //   history.pushState(null, null, 'game');
+    // });
+    window.onpopstate = () => history.forward()
+
+    // window.onunload = () => {
+    //   exitRoom()
+    // }
+    getRoomGameInfoAndDisplay()
+    // Call getList() as soon as page is finished loading to display the todolist
+    window.onload = updateGame;
+    // ... also call getList every 5 seconds hereafter to update the list
+    window.setInterval(updateGame, 1000);
+  </script>
+</body>
+
+</html>

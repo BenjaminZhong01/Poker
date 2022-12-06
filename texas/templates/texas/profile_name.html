@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+    {% load static %}
+    <link href="{% static 'texas/profile.css' %}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <script src="{% static 'texas/ajax/main_ajax.js' %}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title id=""> Profile </title>
+</head>
+<body>
+<div class="main">
+    <div class="main_bar">
+        TARTANS TEXAS HOLD'EM GAME CENTER
+    </div>
+    <div class="main_content">
+
+
+        <div id="left_half">
+
+            <div id="top_button_area">
+                <a class="button_style" id="profile_button" href="{% url 'main' %}">Back</a>
+                <a class="button_style" id="logout_button" href="{% url 'logout' %}">Logout</a>
+            </div>
+
+
+
+            {% block content %}
+
+            {% if not profile.picture %}
+            <img src="{% static 'texas/default_header.png' %}" class="profile_picture" id="id_profile_picture">
+            {% else %}
+            <img src="{% url 'get_photo' profile.user.id %}" class="profile_picture" id="id_profile_picture" alt="image not found">
+            {% endif %}
+
+            <form action='{% url "my_profile" %}' method="POST" enctype="multipart/form-data">
+
+                <table>
+                    <tr>
+                        <th><label for="id_profile_picture">Upload image:</label></th>
+                        <td>
+                            <input type="file" name="picture">
+                        </td>
+                    </tr>
+
+                </table>
+
+                {% csrf_token %}
+                <button id = 'id_update_profile_button'>Submit</button>
+            </form>
+            {% endblock %}
+
+        </div>
+
+        <div id="right_half">
+            <button id="buy_in_button" class="form_button_style"><a href="{% url 'my_profile_token' %}">Buy in</a></button>
+
+            <form method="post" action="{% url 'my_profile_name' %}">
+
+                <table>
+                    <tr>
+                        <td>{{form.visible_fields.0.label_tag}}</td>
+                        <input id="name_input" class="text_box" type="text" name="username" maxlength="150" required="" id="id_username" placeholder="{{user.username}}">
+                        <td class="errorlist">
+                            {% for error in form.visible_fields.0.errors %} {{error}} {% endfor %}
+                        </td>
+                    </tr>
+
+                </table>
+
+                {% csrf_token %}
+                <button id="name_edit_button" class="form_button_style" onclick="">Done</button>
+                {% for error in form.non_field_errors %}
+                <p class="errorlist">
+                    {{ error }}
+                </p>
+                {% endfor %}
+            </form>
+
+
+
+            <form>
+                <div>
+                </div>
+            </form>
+            <div class="user_info"><b>Username: </b></div>
+            <div class="user_info" ><b>Tokens:  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</b>{{user.profile.tokens}}</div>
+            <div class="user_info"><b>Ranking:  &nbsp &nbsp &nbsp &nbsp &nbsp </b>{{user.profile.rank}}</div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
